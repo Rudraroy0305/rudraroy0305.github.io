@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rudra Roy — Portfolio</title>
+  <style>
+    /* Minimal, readable styles */
+    :root { --max: 920px; }
+    * { box-sizing: border-box; }
+    body { margin:0; font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color:#111; }
+    header { position:sticky; top:0; background:#fff; border-bottom:1px solid #eee; }
+    nav { max-width:var(--max); margin:0 auto; display:flex; align-items:center; justify-content:space-between; padding:10px 16px; }
+    nav a { text-decoration:none; color:#111; margin-left:16px; font-weight:600; }
+    .container { max-width:var(--max); margin:0 auto; padding:28px 16px; }
+    .hero { padding:48px 0; }
+    h1 { font-size:34px; line-height:1.2; margin:0 0 8px; }
+    h2 { font-size:24px; margin:32px 0 12px; }
+    .muted { color:#666; }
+    .btn { display:inline-block; padding:10px 16px; border:1px solid #111; border-radius:8px; text-decoration:none; }
+    .grid { display:grid; gap:16px; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); }
+    footer { border-top:1px solid #eee; padding:24px 16px; text-align:center; color:#666; }
+    .tag { font-size:12px; padding:2px 8px; border:1px solid #ddd; border-radius:999px; margin-right:6px; }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div><strong>Rudra Roy</strong></div>
+      <div>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Hello, I’m <span class="muted">Rudra Roy</span></h1>
+      <p class="muted">[Short title from CV goes here — e.g., “Researcher • Developer • Student”]</p>
+      <p>Focused on [your main areas from CV]. Building clean, practical solutions and sharing my work.</p>
+      <p>
+        <a class="btn" href="#projects">See my work</a>
+        <a class="btn" href="#contact" style="margin-left:8px;">Get in touch</a>
+      </p>
+    </section>
+
+    <section id="about">
+      <h2>About</h2>
+      <p>[2–4 sentence bio distilled from your CV. We’ll replace this with precise text next.]</p>
+      <p>
+        <span class="tag">Skills</span>
+        [list 5–8 core skills from CV]
+      </p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="grid">
+        <article>
+          <h3>Project One</h3>
+          <p class="muted">Brief one-line summary. Tech stack / role.</p>
+          <p>[2–3 bullet-style sentences about what you did and the result.]</p>
+        </article>
+        <article>
+          <h3>Project Two</h3>
+          <p class="muted">Brief one-line summary. Tech stack / role.</p>
+          <p>[2–3 bullet-style sentences about what you did and the result.]</p>
+        </article>
+        <article>
+          <h3>Project Three</h3>
+          <p class="muted">Brief one-line summary. Tech stack / role.</p>
+          <p>[2–3 bullet-style sentences about what you did and the result.]</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:YOUR_EMAIL_FROM_CV">YOUR_EMAIL_FROM_CV</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/YOUR_LINKEDIN">linkedin.com/in/YOUR_LINKEDIN</a></p>
+      <p>GitHub: <a href="https://github.com/rudraroy0305">github.com/rudraroy0305</a></p>
+    </section>
+  </main>
+
+  <footer>© <span id="y"></span> Rudra Roy</footer>
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
