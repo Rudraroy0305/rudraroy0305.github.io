@@ -44,16 +44,25 @@
   </header>
 
   <main class="container">
-    <section class="hero">
-      <div class="pill">Portfolio</div>
-      <h1>Hello, I’m Rudra Roy</h1>
-      <p class="muted">MSc EEE @ BUET • AI · Computer Vision · Speech/Audio</p>
-      <p>Focused on deep learning, computer vision, and speech/audio signal processing, with hands-on IoT & robotics work. I like turning research ideas into usable systems.</p>
-      <p>
-        <a class="btn" href="#projects">See my work</a>
-        <a class="btn" href="#contact">Get in touch</a>
-        <a class="btn" href="assets/resume.pdf" target="_blank" rel="noopener">Download CV</a>
-      </p>
+    <!-- HERO with photo + social + correct CV path -->
+    <section class="hero" style="display:grid;grid-template-columns:120px 1fr;gap:18px;align-items:center;">
+      <img src="assets/img/profile.jpg" alt="Rudra Roy" style="width:120px;height:120px;border-radius:50%;object-fit:cover;border:1px solid #eee;" onerror="this.style.display='none'; this.nextElementSibling.style.gridColumn='1 / -1';" />
+      <div>
+        <div class="pill">Portfolio</div>
+        <h1>Hello, I’m Rudra Roy</h1>
+        <p class="muted">MSc EEE @ BUET • AI · Computer Vision · Speech/Audio</p>
+        <p>Focused on deep learning, computer vision, and speech/audio signal processing, with hands-on IoT & robotics work. I like turning research ideas into usable systems.</p>
+        <p>
+          <a class="btn" href="#projects">See my work</a>
+          <a class="btn" href="#contact">Get in touch</a>
+          <a class="btn" href="assets/resume.pdf" target="_blank" rel="noopener">Download CV</a>
+        </p>
+        <p class="muted" style="margin-top:8px;">
+          <a href="https://github.com/Rudraroy0305" aria-label="GitHub" style="text-decoration:none;margin-right:10px;">GitHub</a>
+          <a href="https://www.linkedin.com/in/royrudra7/" aria-label="LinkedIn" style="text-decoration:none;margin-right:10px;">LinkedIn</a>
+          <a href="mailto:rudraroy3517@gmail.com" aria-label="Email" style="text-decoration:none;">Email</a>
+        </p>
+      </div>
     </section>
 
     <section id="about">
