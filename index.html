@@ -4,23 +4,31 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Rudra Roy — Portfolio</title>
+  <meta name="description" content="Rudra Roy — MSc EEE @ BUET. Deep learning, computer vision, speech/audio, IoT & robotics." />
   <style>
-    /* Minimal, readable styles */
-    :root { --max: 920px; }
+    :root { --max: 960px; }
     * { box-sizing: border-box; }
-    body { margin:0; font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color:#111; }
-    header { position:sticky; top:0; background:#fff; border-bottom:1px solid #eee; }
-    nav { max-width:var(--max); margin:0 auto; display:flex; align-items:center; justify-content:space-between; padding:10px 16px; }
-    nav a { text-decoration:none; color:#111; margin-left:16px; font-weight:600; }
+    html, body { margin:0; padding:0; }
+    body { font:16px/1.65 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color:#111; background:#fff; }
+    a { color:inherit; }
+    header { position:sticky; top:0; background:#fff; border-bottom:1px solid #eee; z-index:20; }
+    nav { max-width:var(--max); margin:0 auto; display:flex; align-items:center; justify-content:space-between; padding:12px 16px; }
+    nav a { text-decoration:none; font-weight:600; margin-left:16px; }
+    nav a:hover { text-decoration:underline; }
     .container { max-width:var(--max); margin:0 auto; padding:28px 16px; }
-    .hero { padding:48px 0; }
-    h1 { font-size:34px; line-height:1.2; margin:0 0 8px; }
-    h2 { font-size:24px; margin:32px 0 12px; }
+    .hero { padding:48px 0 24px; }
+    h1 { font-size:40px; line-height:1.15; margin:0 0 8px; }
+    h2 { font-size:26px; margin:32px 0 12px; }
+    h3 { margin:12px 0 6px; }
     .muted { color:#666; }
-    .btn { display:inline-block; padding:10px 16px; border:1px solid #111; border-radius:8px; text-decoration:none; }
-    .grid { display:grid; gap:16px; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); }
-    footer { border-top:1px solid #eee; padding:24px 16px; text-align:center; color:#666; }
-    .tag { font-size:12px; padding:2px 8px; border:1px solid #ddd; border-radius:999px; margin-right:6px; }
+    .btn { display:inline-block; padding:10px 16px; border:1px solid #111; border-radius:10px; text-decoration:none; font-weight:600; }
+    .btn + .btn { margin-left:8px; }
+    .grid { display:grid; gap:18px; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); }
+    article { border:1px solid #eee; border-radius:14px; padding:16px; }
+    footer { border-top:1px solid #eee; padding:28px 16px; text-align:center; color:#666; }
+    .tag { font-size:12px; padding:2px 8px; border:1px solid #ddd; border-radius:999px; margin-right:6px; display:inline-block; }
+    .pill { display:inline-block; font-size:12px; padding:4px 10px; border:1px solid #222; border-radius:999px; }
+    @media (max-width:420px){ h1{ font-size:32px; } }
   </style>
 </head>
 <body>
@@ -37,21 +45,24 @@
 
   <main class="container">
     <section class="hero">
-      <h1>Hello, I’m <span class="muted">Rudra Roy</span></h1>
-      <p class="muted">[Short title from CV goes here — e.g., “Researcher • Developer • Student”]</p>
-      <p>Focused on [your main areas from CV]. Building clean, practical solutions and sharing my work.</p>
+      <div class="pill">Portfolio</div>
+      <h1>Hello, I’m Rudra Roy</h1>
+      <p class="muted">MSc EEE @ BUET • AI · Computer Vision · Speech/Audio</p>
+      <p>Focused on deep learning, computer vision, and speech/audio signal processing, with hands-on IoT & robotics work. I like turning research ideas into usable systems.</p>
       <p>
         <a class="btn" href="#projects">See my work</a>
-        <a class="btn" href="#contact" style="margin-left:8px;">Get in touch</a>
+        <a class="btn" href="#contact">Get in touch</a>
       </p>
     </section>
 
     <section id="about">
       <h2>About</h2>
-      <p>[2–4 sentence bio distilled from your CV. We’ll replace this with precise text next.]</p>
+      <p>I’m a graduate student in Electrical & Electronic Engineering at BUET (MSc, Communication & Signal Processing). My interests span deep learning, computer vision, and audio/speech processing — and I enjoy building practical solutions in robotics and automation.</p>
+      <p>Currently, I work as an R&amp;D Engineer at Cybernetics Hi-Tech Solutions, with prior contributions to ICCIT 2024 operations and an internship at Nagad.</p>
       <p>
         <span class="tag">Skills</span>
-        [list 5–8 core skills from CV]
+        Python · PyTorch/TensorFlow · OpenCV · Librosa/Torchaudio · Scikit-learn · MATLAB/Simulink ·
+        Embedded/IoT (Arduino, Raspberry Pi) · ROS (ROS2/Noetic) · Git/Docker · Web (HTML/CSS/JS/React)
       </p>
     </section>
 
@@ -59,32 +70,34 @@
       <h2>Projects</h2>
       <div class="grid">
         <article>
-          <h3>Project One</h3>
-          <p class="muted">Brief one-line summary. Tech stack / role.</p>
-          <p>[2–3 bullet-style sentences about what you did and the result.]</p>
+          <h3>CAPRes50-GAN — Sign Language Recognition</h3>
+          <p class="muted">Undergraduate thesis · Deep Learning, GANs, CV</p>
+          <p>Developed a GAN-enhanced model for word-level sign language recognition from video. Built a real-time detection app to support communication for the deaf community.</p>
         </article>
+
         <article>
-          <h3>Project Two</h3>
-          <p class="muted">Brief one-line summary. Tech stack / role.</p>
-          <p>[2–3 bullet-style sentences about what you did and the result.]</p>
+          <h3>IoT-Based Gas Burner Monitoring</h3>
+          <p class="muted">Robotics &amp; Automation Lab · IoT, Sensors, Realtime</p>
+          <p>Smart sensors track gas level, temperature, and flame status; data is sent wirelessly for remote monitoring. Alerts and control help prevent accidents and enable rapid response.</p>
         </article>
+
         <article>
-          <h3>Project Three</h3>
-          <p class="muted">Brief one-line summary. Tech stack / role.</p>
-          <p>[2–3 bullet-style sentences about what you did and the result.]</p>
+          <h3>Smart Solar Panel Monitoring &amp; Solar Tracker</h3>
+          <p class="muted">Energy Systems · Embedded, Control</p>
+          <p>Built a real-time monitoring system and automated tracker to maximize energy generation; implemented sensing, actuation, and data logging for performance analysis.</p>
         </article>
       </div>
     </section>
 
     <section id="contact">
       <h2>Contact</h2>
-      <p>Email: <a href="mailto:YOUR_EMAIL_FROM_CV">YOUR_EMAIL_FROM_CV</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/YOUR_LINKEDIN">linkedin.com/in/YOUR_LINKEDIN</a></p>
-      <p>GitHub: <a href="https://github.com/rudraroy0305">github.com/rudraroy0305</a></p>
+      <p>Email: <a href="mailto:rudraroy3517@gmail.com">rudraroy3517@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/royrudra7/">linkedin.com/in/royrudra7</a></p>
+      <p>GitHub: <a href="https://github.com/Rudraroy0305">github.com/Rudraroy0305</a></p>
     </section>
   </main>
 
   <footer>© <span id="y"></span> Rudra Roy</footer>
-  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
