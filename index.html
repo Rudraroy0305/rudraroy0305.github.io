@@ -5,31 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Rudra Roy — Portfolio</title>
   <meta name="description" content="Rudra Roy — MSc EEE @ BUET. Deep learning, computer vision, speech/audio, IoT & robotics." />
-  <style>
-    :root { --max: 960px; }
-    * { box-sizing: border-box; }
-    html, body { margin:0; padding:0; }
-    body { font:16px/1.65 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color:#111; background:#fff; }
-    a { color:inherit; }
-    header { position:sticky; top:0; background:#fff; border-bottom:1px solid #eee; z-index:20; }
-    nav { max-width:var(--max); margin:0 auto; display:flex; align-items:center; justify-content:space-between; padding:12px 16px; }
-    nav a { text-decoration:none; font-weight:600; margin-left:16px; }
-    nav a:hover { text-decoration:underline; }
-    .container { max-width:var(--max); margin:0 auto; padding:28px 16px; }
-    .hero { padding:48px 0 24px; }
-    h1 { font-size:40px; line-height:1.15; margin:0 0 8px; }
-    h2 { font-size:26px; margin:32px 0 12px; }
-    h3 { margin:12px 0 6px; }
-    .muted { color:#666; }
-    .btn { display:inline-block; padding:10px 16px; border:1px solid #111; border-radius:10px; text-decoration:none; font-weight:600; }
-    .btn + .btn { margin-left:8px; }
-    .grid { display:grid; gap:18px; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); }
-    article { border:1px solid #eee; border-radius:14px; padding:16px; }
-    footer { border-top:1px solid #eee; padding:28px 16px; text-align:center; color:#666; }
-    .tag { font-size:12px; padding:2px 8px; border:1px solid #ddd; border-radius:999px; margin-right:6px; display:inline-block; }
-    .pill { display:inline-block; font-size:12px; padding:4px 10px; border:1px solid #222; border-radius:999px; }
-    @media (max-width:420px){ h1{ font-size:32px; } }
-  </style>
+  <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
   <header>
@@ -46,9 +22,11 @@
   </header>
 
   <main class="container">
-    <!-- HERO with photo + social + correct CV path -->
-    <section class="hero" style="display:grid;grid-template-columns:120px 1fr;gap:18px;align-items:center;">
-      <img src="assets/img/profile.jpg" alt="Rudra Roy" style="width:120px;height:120px;border-radius:50%;object-fit:cover;border:1px solid #eee;" onerror="this.style.display='none'; this.nextElementSibling.style.gridColumn='1 / -1';" />
+    <!-- HERO with photo + social + CV -->
+    <section class="hero hero-grid">
+      <img src="assets/img/profile.jpg" alt="Rudra Roy"
+           style="width:120px;height:120px;border-radius:50%;object-fit:cover;border:1px solid #eee;"
+           onerror="this.style.display='none'; this.nextElementSibling.style.gridColumn='1 / -1';" />
       <div>
         <div class="pill">Portfolio</div>
         <h1>Hello, I’m Rudra Roy</h1>
@@ -100,74 +78,69 @@
         </article>
       </div>
     </section>
+
     <section id="education">
-     <h2>Education</h2>
-
-     <article>
-         <h3>Bangladesh University of Engineering &amp; Technology (BUET)</h3>
-         <p class="muted">M.Sc. in Electrical &amp; Electronic Engineering (Communication &amp; Signal Processing) — 2024–Ongoing, Dhaka, Bangladesh</p>
-         <ul style="margin:0 0 8px 18px;">
-         <li>CGPA: 3.83 / 4.00 (after 1st semester)</li>
-         <li>Focus: AI, Computer Vision, Speech/Audio Signal Processing</li>
-         </ul>
-     </article>
-
-     <article>
-         <h3>Bangladesh University of Engineering &amp; Technology (BUET)</h3>
-         <p class="muted">B.Sc. in Electrical &amp; Electronic Engineering (Communication &amp; Signal Processing) — Apr 2019 – May 2024, Dhaka, Bangladesh</p>
-         <ul style="margin:0 0 8px 18px;">
-         <li>CGPA: 3.38 / 4.00</li>
-         <li>Undergraduate Thesis: CAPRes50-GAN — Word-level Sign Language Recognition with GAN-based classifier</li>
-         </ul>
-     </article>
+      <h2>Education</h2>
+      <article>
+        <h3>Bangladesh University of Engineering &amp; Technology (BUET)</h3>
+        <p class="muted">M.Sc. in Electrical &amp; Electronic Engineering (Communication &amp; Signal Processing) — 2024–Ongoing, Dhaka, Bangladesh</p>
+        <ul style="margin:0 0 8px 18px;">
+          <li>CGPA: 3.83 / 4.00 (after 1st semester)</li>
+          <li>Focus: AI, Computer Vision, Speech/Audio Signal Processing</li>
+        </ul>
+      </article>
+      <article>
+        <h3>Bangladesh University of Engineering &amp; Technology (BUET)</h3>
+        <p class="muted">B.Sc. in Electrical &amp; Electronic Engineering (Communication &amp; Signal Processing) — Apr 2019 – May 2024, Dhaka, Bangladesh</p>
+        <ul style="margin:0 0 8px 18px;">
+          <li>CGPA: 3.38 / 4.00</li>
+          <li>Undergraduate Thesis: CAPRes50-GAN — Word-level Sign Language Recognition with GAN-based classifier</li>
+        </ul>
+      </article>
     </section>
+
     <section id="experience">
-     <h2>Experience</h2>
-
-     <article>
-         <h3>R&amp;D Engineer — Cybernetics Hi-Tech Solutions</h3>
-         <p class="muted">Jan 2025 – Present · Dhaka, Bangladesh</p>
-         <ul style="margin:0 0 8px 18px;">
-         <li>Contributing to R&amp;D on IoT and robotics systems; end-to-end prototyping</li>
-         <li>Successfully deployed a Greenhouse Automation project to BWMRI</li>
-         </ul>
-     </article>
-
-     <article>
-         <h3>Asia Pacific Internet Engineer 2025 (Training Program)</h3>
-         <p class="muted">Feb 9 – 15, 2025 · Universitas Brawijaya (UB), Malang, Indonesia</p>
-         <ul style="margin:0 0 8px 18px;">
-         <li>Network design &amp; deployment, virtualization, and web server security</li>
-         <li>Hands-on DNS configuration/protection; IoT system design &amp; cloud integration</li>
-         </ul>
-     </article>
-
-     <article>
-         <h3>Assistant Technical Secretary — ICCIT 2024</h3>
-         <p class="muted">2024 · Cox’s Bazar, Bangladesh</p>
-         <ul style="margin:0 0 8px 18px;">
-         <li>Helped automate submission workflows and final checks</li>
-         <li>Directed hybrid technical sessions</li>
-         </ul>
-     </article>
-
-     <article>
-         <h3>Academic Advisor — Udvash</h3>
-         <p class="muted">2021 – Present · Dhaka, Bangladesh</p>
-         <ul style="margin:0 0 8px 18px;">
-         <li>Academic guidance, curriculum support, and student assessment</li>
-         </ul>
-     </article>
-
-     <article>
-         <h3>Intern — Nagad</h3>
-         <p class="muted">Nov 2023 – Dec 2023 · Dhaka, Bangladesh</p>
-         <ul style="margin:0 0 8px 18px;">
-         <li>Supported product/tech operations; analyses and documentation</li>
-         </ul>
-     </article>
+      <h2>Experience</h2>
+      <article>
+        <h3>R&amp;D Engineer — Cybernetics Hi-Tech Solutions</h3>
+        <p class="muted">Jan 2025 – Present · Dhaka, Bangladesh</p>
+        <ul style="margin:0 0 8px 18px;">
+          <li>Contributing to R&amp;D on IoT and robotics systems; end-to-end prototyping</li>
+          <li>Successfully deployed a Greenhouse Automation project to BWMRI</li>
+        </ul>
+      </article>
+      <article>
+        <h3>Asia Pacific Internet Engineer 2025 (Training Program)</h3>
+        <p class="muted">Feb 9 – 15, 2025 · Universitas Brawijaya (UB), Malang, Indonesia</p>
+        <ul style="margin:0 0 8px 18px;">
+          <li>Network design &amp; deployment, virtualization, and web server security</li>
+          <li>Hands-on DNS configuration/protection; IoT system design &amp; cloud integration</li>
+        </ul>
+      </article>
+      <article>
+        <h3>Assistant Technical Secretary — ICCIT 2024</h3>
+        <p class="muted">2024 · Cox’s Bazar, Bangladesh</p>
+        <ul style="margin:0 0 8px 18px;">
+          <li>Helped automate submission workflows and final checks</li>
+          <li>Directed hybrid technical sessions</li>
+        </ul>
+      </article>
+      <article>
+        <h3>Academic Advisor — Udvash</h3>
+        <p class="muted">2021 – Present · Dhaka, Bangladesh</p>
+        <ul style="margin:0 0 8px 18px;">
+          <li>Academic guidance, curriculum support, and student assessment</li>
+        </ul>
+      </article>
+      <article>
+        <h3>Intern — Nagad</h3>
+        <p class="muted">Nov 2023 – Dec 2023 · Dhaka, Bangladesh</p>
+        <ul style="margin:0 0 8px 18px;">
+          <li>Supported product/tech operations; analyses and documentation</li>
+        </ul>
+      </article>
     </section>
-    
+
     <section id="contact">
       <h2>Contact</h2>
       <p>Email: <a href="mailto:rudraroy3517@gmail.com">rudraroy3517@gmail.com</a></p>
@@ -177,6 +150,6 @@
   </main>
 
   <footer>© <span id="y"></span> Rudra Roy</footer>
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
