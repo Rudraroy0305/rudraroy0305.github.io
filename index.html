@@ -6,8 +6,10 @@
   <title>Rudra Roy — Portfolio</title>
   <meta name="description" content="Rudra Roy — MSc EEE @ BUET. Deep learning, computer vision, speech/audio, IoT & robotics." />
   <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
 </head>
 <body>
+  <!-- Top Nav -->
   <header>
     <nav>
       <div><strong>Rudra Roy</strong></div>
@@ -21,12 +23,16 @@
       </div>
     </nav>
   </header>
+
+  <!-- HERO BANNER (full-width) -->
   <section class="hero-banner">
     <div class="inner">
       <h1 class="hero-title">Rudra Roy</h1>
       <div class="hero-sub">MSc EEE @ BUET · AI · Computer Vision · Speech/Audio</div>
     </div>
   </section>
+
+  <!-- ABOUT (two-column) -->
   <section id="about" class="about-wrap">
     <img class="about-photo" src="assets/img/profile.jpg" alt="Rudra Roy" />
     <div class="about-text">
@@ -39,39 +45,29 @@
         <a class="btn" href="#projects">See my work</a>
         <a class="btn" href="assets/resume.pdf" target="_blank" rel="noopener">Download CV</a>
       </p>
+      <p class="muted" style="margin-top:8px;">
+        <a href="https://github.com/Rudraroy0305" aria-label="GitHub" style="text-decoration:none;margin-right:10px;">GitHub</a>
+        <a href="https://www.linkedin.com/in/royrudra7/" aria-label="LinkedIn" style="text-decoration:none;margin-right:10px;">LinkedIn</a>
+        <a href="mailto:rudraroy3517@gmail.com" aria-label="Email" style="text-decoration:none;">Email</a>
+      </p>
     </div>
   </section>
 
+  <!-- PAGE CONTENT -->
   <main class="container">
 
-
+    <!-- PROJECTS (rendered from assets/data/projects.json) -->
     <section id="projects">
       <h2>Projects</h2>
-      <div id="projects-list" class="work-grid" aria-live="polite">>
-        <article>
-          <h3>CAPRes50-GAN — Sign Language Recognition</h3>
-          <p class="muted">Undergraduate thesis · Deep Learning, GANs, CV</p>
-          <p>Developed a GAN-enhanced model for word-level sign language recognition from video. Built a real-time detection app to support communication for the deaf community.</p>
-        </article>
-
-        <article>
-          <h3>IoT-Based Gas Burner Monitoring</h3>
-          <p class="muted">Robotics &amp; Automation Lab · IoT, Sensors, Realtime</p>
-          <p>Smart sensors track gas level, temperature, and flame status; data is sent wirelessly for remote monitoring. Alerts and control help prevent accidents and enable rapid response.</p>
-        </article>
-
-        <article>
-          <h3>Smart Solar Panel Monitoring &amp; Solar Tracker</h3>
-          <p class="muted">Energy Systems · Embedded, Control</p>
-          <p>Built a real-time monitoring system and automated tracker to maximize energy generation; implemented sensing, actuation, and data logging for performance analysis.</p>
-        </article>
-      </div>
+      <div id="projects-list" class="work-grid" aria-live="polite"></div>
     </section>
+
+    <!-- PUBLICATIONS (rendered from assets/data/publications.json) -->
     <section id="publications">
       <h2>Publications</h2>
-      <div id="pubs-list" class="grid" aria-live="polite"></div>
+      <div id="pubs-list" class="work-grid" aria-live="polite"></div>
 
-      <!-- Modal root (kept once, populated by JS) -->
+      <!-- Modal root (populated by JS) -->
       <div id="pub-modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
         <div class="modal__backdrop" data-close></div>
         <div class="modal__dialog" role="document">
@@ -84,6 +80,8 @@
         </div>
       </div>
     </section>
+
+    <!-- EDUCATION -->
     <section id="education">
       <h2>Education</h2>
       <article>
@@ -104,6 +102,7 @@
       </article>
     </section>
 
+    <!-- EXPERIENCE -->
     <section id="experience">
       <h2>Experience</h2>
       <article>
@@ -146,6 +145,7 @@
       </article>
     </section>
 
+    <!-- CONTACT -->
     <section id="contact">
       <h2>Contact</h2>
       <p>Email: <a href="mailto:rudraroy3517@gmail.com">rudraroy3517@gmail.com</a></p>
@@ -154,7 +154,10 @@
     </section>
   </main>
 
+  <!-- FOOTER -->
   <footer>© <span id="y"></span> Rudra Roy</footer>
+
+  <!-- JS -->
   <script src="assets/js/main.js"></script>
 </body>
 </html>
