@@ -108,3 +108,24 @@ footer { border-top:1px solid #eee; padding:28px 16px; text-align:center; color:
 }
 .modal__img { max-height:420px; }
 .modal__close{ background:#eef2ff; }
+/* ---- Hero banner (full width, centered name) ---- */
+header { background: transparent; border-bottom: 0; }
+.header-solid { background: rgba(255,255,255,0.9); border-bottom: 1px solid #eee; backdrop-filter: saturate(140%) blur(6px); }
+.hero-banner{
+  position: relative;
+  min-height: 48vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: #fff;
+  background: #0f172a url('../img/hero.jpg') center/cover no-repeat;
+}
+.hero-banner::after{
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,.45), rgba(0,0,0,.35));
+}
+.hero-banner > .inner{
+  position: relative; z-index: 1; max-width: 1000px; padding: 24px;
+}
+.hero-title{ font-size: clamp(40px, 7vw, 72px); margin: 0 0 8px; letter-spacing: .5px; }
+.hero-sub{ font-size: clamp(14px, 2.4vw, 18px); opacity: .9; }
