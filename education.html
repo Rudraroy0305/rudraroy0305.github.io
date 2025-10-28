@@ -7,6 +7,35 @@
   <meta name="description" content="Education of Rudra Roy — BUET MSc & BSc in EEE; HSC at Govt. M. M. City College, SSC at Khulna Zilla School." />
   <link rel="stylesheet" href="assets/css/styles.css" />
   <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+
+  <!-- Page-specific styles: one-row-per-institution -->
+  <style>
+    .edu-section { max-width: 1100px; margin: 24px auto 0; padding: 0 16px; }
+    .edu-list { display: grid; gap: 18px; }
+    .edu-row {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 20px;
+      align-items: stretch;
+      border: 1px solid #e8ecf5;
+      border-radius: 16px;
+      background: #fff;
+      box-shadow: 0 8px 18px rgba(15,23,42,.06);
+      overflow: hidden;
+    }
+    .edu-img {
+      background-size: cover;
+      background-position: center;
+      min-height: 220px;  /* ensures a nice height even if text is short */
+    }
+    .edu-body { padding: 16px 18px; }
+    .edu-body h3 { margin: 0 0 4px; }
+    .edu-body p { margin: 6px 0; }
+    @media (max-width: 860px){
+      .edu-row { grid-template-columns: 1fr; }
+      .edu-img { height: 220px; }
+    }
+  </style>
 </head>
 <body>
   <!-- shared header (injected) -->
@@ -20,14 +49,16 @@
     </div>
   </section>
 
-  <main class="container">
-    <!-- Degrees -->
-    <section>
-      <div class="work-grid" style="margin-top: 12px;">
+  <main>
+    <!-- Degrees (one row per institution) -->
+    <section class="edu-section" aria-labelledby="deg-title">
+      <h2 id="deg-title">Degrees</h2>
+      <div class="edu-list">
+
         <!-- MSc -->
-        <article class="card">
-          <div class="card__img" style="background-image:url('assets/img/pubs/Buet_lip.jpeg');"></div>
-          <div class="card__body">
+        <article class="edu-row">
+          <div class="edu-img" style="background-image:url('assets/img/edu/Buet_lip.jpeg');"></div>
+          <div class="edu-body">
             <h3 class="card__title">M.Sc. in Electrical &amp; Electronic Engineering</h3>
             <p class="card__subtitle">Bangladesh University of Engineering &amp; Technology (BUET) — 2024–Ongoing, Dhaka</p>
             <p class="card__desc">
@@ -39,9 +70,9 @@
         </article>
 
         <!-- BSc -->
-        <article class="card">
-          <div class="card__img" style="background-image:url('assets/img/pubs/ECE_img.jpg');"></div>
-          <div class="card__body">
+        <article class="edu-row">
+          <div class="edu-img" style="background-image:url('assets/img/edu/ECE_img.jpg');"></div>
+          <div class="edu-body">
             <h3 class="card__title">B.Sc. in Electrical &amp; Electronic Engineering</h3>
             <p class="card__subtitle">Bangladesh University of Engineering &amp; Technology (BUET) — Apr 2019 – May 2024, Dhaka</p>
             <p class="card__desc">
@@ -50,19 +81,19 @@
             </p>
           </div>
         </article>
+
       </div>
     </section>
 
-    <!-- Secondary & Higher Secondary -->
-    <section style="margin-top: 28px;">
-      <h2>Secondary &amp; Higher Secondary</h2>
-      <div class="work-grid" style="margin-top:12px;">
+    <!-- Secondary & Higher Secondary (one row per institution) -->
+    <section class="edu-section" aria-labelledby="sec-title">
+      <h2 id="sec-title">Secondary &amp; Higher Secondary</h2>
+      <div class="edu-list">
 
         <!-- College (HSC) -->
-        <article class="card">
-          <!-- Replace image file if needed -->
-          <div class="card__img" style="background-image:url('assets/img/edu/city_college.jpg');"></div>
-          <div class="card__body">
+        <article class="edu-row">
+          <div class="edu-img" style="background-image:url('assets/img/edu/city_college.jpg');"></div>
+          <div class="edu-body">
             <h3 class="card__title">Govt. M. M. City College, Khulna</h3>
             <p class="card__subtitle">(Passing Year: 2018)</p>
             <p class="card__desc">
@@ -75,10 +106,9 @@
         </article>
 
         <!-- School (SSC) -->
-        <article class="card">
-          <!-- Replace image file if needed -->
-          <div class="card__img" style="background-image:url('assets/img/edu/zilla_school.jpg');"></div>
-          <div class="card__body">
+        <article class="edu-row">
+          <div class="edu-img" style="background-image:url('assets/img/edu/zilla_school.jpg');"></div>
+          <div class="edu-body">
             <h3 class="card__title">Khulna Zilla School, Khulna</h3>
             <p class="card__subtitle">(Passing Year: 2016)</p>
             <p class="card__desc">
@@ -94,7 +124,7 @@
     </section>
 
     <!-- Coursework / Skills -->
-    <section style="margin-top: 28px;">
+    <section class="edu-section" style="margin-bottom: 28px;">
       <h2>Relevant Coursework &amp; Skills</h2>
       <div class="chips" style="margin-top: 8px;">
         <span class="chip">Digital Signal Processing</span>
