@@ -167,3 +167,61 @@ nav a.active::after {
   content: ""; position: absolute; left: 8px; right: 8px; bottom: 4px;
   height: 2px; border-radius: 999px; background: #0f172a;
 }
+/* ---------- Animated Modal (Publications) ---------- */
+.modal {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  pointer-events: none;      /* disabled until opened */
+  opacity: 0;
+  transition: opacity .25s ease;
+  z-index: 999;
+}
+.modal.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+.modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(9, 14, 24, 0.55);
+  backdrop-filter: blur(2px);
+  opacity: 0;
+  transition: opacity .25s ease;
+}
+.modal.is-open .modal__backdrop {
+  opacity: 1;
+}
+.modal__dialog {
+  position: relative;
+  width: min(96vw, 980px);
+  max-height: 86vh;
+  overflow: auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(15,23,42,.25);
+  transform: translateY(20px) scale(.98);
+  opacity: 0;
+  transition:
+    transform .28s cubic-bezier(.2, .8, .2, 1),
+    opacity   .28s ease;
+}
+.modal.is-open .modal__dialog {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+.modal__close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  border: 1px solid #e6e6ea;
+  background: #fff;
+  font-size: 20px;
+  line-height: 34px;
+  text-align: center;
+  cursor: pointer;
+}

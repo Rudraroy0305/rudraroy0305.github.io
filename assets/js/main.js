@@ -268,30 +268,55 @@ document.addEventListener('DOMContentLoaded', () => {
   if (!wrap) return; // only on publications.html
 
   // Modal bits (already present on publications.html)
-  const modal = document.getElementById('pub-modal');
-  const mImg = document.getElementById('pub-modal-img');
+  const modal  = document.getElementById('pub-modal');
+  const mImg   = document.getElementById('pub-modal-img');
   const mTitle = document.getElementById('pub-modal-title');
   const mVenue = document.getElementById('pub-modal-venue');
-  const mDesc = document.getElementById('pub-modal-desc');
+  const mDesc  = document.getElementById('pub-modal-desc');
   const mLinks = document.getElementById('pub-modal-links');
 
+  // ---------- Animated open/close ----------
   function openModal(p) {
     mImg.src = p.img || '';
     mImg.alt = p.title || '';
     mTitle.textContent = p.title || '';
     mVenue.textContent = p.venue || '';
-    mDesc.textContent = p.desc || '';
+    mDesc.textContent  = p.desc || '';
     mLinks.innerHTML = `
       ${p.doi ? `<a class="btn" href="${p.doi}" target="_blank" rel="noopener">DOI</a>` : ''}
       ${p.scholar ? `<a class="btn" href="${p.scholar}" target="_blank" rel="noopener" style="margin-left:8px;">Google Scholar</a>` : ''}
     `;
+
     modal.setAttribute('aria-hidden', 'false');
+    modal.classList.add('is-open');      // <-- triggers CSS fade/scale
     document.body.style.overflow = 'hidden';
+
+    const closeBtn = modal.querySelector('.modal__close');
+    if (closeBtn) closeBtn.focus();
   }
+
   function closeModal() {
-    modal.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
+    // start closing animation
+    modal.classList.remove('is-open');
+
+    // when the opacity transition on .modal ends, actually hide it
+    const onEnd = (e) => {
+      if (e.target !== modal) return;    // ignore inner transitions
+      modal.removeEventListener('transitionend', onEnd);
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    };
+    modal.addEventListener('transitionend', onEnd, { once: true });
+
+    // safety fallback in case transitionend doesn’t fire
+    setTimeout(() => {
+      if (modal.getAttribute('aria-hidden') !== 'true') {
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+    }, 350);
   }
+
   modal.addEventListener('click', (e) => {
     if (e.target.matches('[data-close]') || e.target.classList.contains('modal__backdrop')) {
       closeModal();
@@ -362,3 +387,4 @@ document.addEventListener('DOMContentLoaded', () => {
     console.error(err);
   }
 })();
+
