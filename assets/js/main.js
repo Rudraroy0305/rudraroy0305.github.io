@@ -30,6 +30,22 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', setActive, { passive: true });
 })();
 
+// ------------ Solid header after hero ------------
+(() => {
+  const header = document.querySelector('header');
+  const hero = document.querySelector('.hero-banner');
+  if (!header || !hero) return;
+
+  const THRESHOLD = hero.offsetHeight * 0.35; // ~35% of hero height
+  function onScroll() {
+    const y = window.scrollY || window.pageYOffset || 0;
+    if (y > THRESHOLD) header.classList.add('scrolled');
+    else header.classList.remove('scrolled');
+  }
+  window.addEventListener('load', onScroll);
+  window.addEventListener('scroll', onScroll, { passive: true });
+})();
+
 /* ========================================================
    Projects: JSON -> square card grid
    Expects:
