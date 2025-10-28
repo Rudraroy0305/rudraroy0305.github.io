@@ -1,23 +1,91 @@
 [
   {
-    "title": "CAPRes50-GAN — Sign Language Recognition",
-    "subtitle": "Undergraduate thesis · Deep Learning, GANs, CV",
-    "summary": "Developed a GAN-enhanced model for word-level sign language recognition from video. Built a real-time detection app to support communication for the deaf community.",
+    "title": "CAPRes50-GAN — Word-Level Sign Language Recognition for Real-Life Scenarios",
+    "subtitle": "Ongoing",
+    "summary": "Robust word-level SLR for real-world conditions using a GAN-based classifier and capacity-aware training.",
+    "status": "current",
+    "img": "assets/img/projects/placeholder.jpg",
+    "tags": ["Computer Vision", "SLR", "GAN"],
     "links": [
-      { "label": "Report (if any)", "href": "#" },
-      { "label": "Code (if public)", "href": "#" }
+      { "label": "View details", "href": "#" }
     ]
   },
   {
-    "title": "IoT-Based Gas Burner Monitoring",
-    "subtitle": "Robotics & Automation Lab · IoT, Sensors, Realtime",
-    "summary": "Smart sensors track gas level, temperature, and flame status; data is sent wirelessly for remote monitoring. Alerts and control help prevent accidents and enable rapid response.",
-    "links": []
+    "title": "pFLOCT — Personalized Federated Learning for OCT Classification",
+    "subtitle": "Ongoing • IEEE Access (prep)",
+    "summary": "Personalized FL for heterogeneous OCT data using adaptive clustering and weight optimization under domain shift.",
+    "status": "current",
+    "img": "assets/img/projects/placeholder.jpg",
+    "tags": ["Federated Learning", "Medical Imaging", "OCT", "Personalization"],
+    "links": [
+      { "label": "View details", "href": "#" }
+    ]
   },
   {
-    "title": "Smart Solar Panel Monitoring & Solar Tracker",
-    "subtitle": "Energy Systems · Embedded, Control",
-    "summary": "Built a real-time monitoring system and automated tracker to maximize energy generation; implemented sensing, actuation, and data logging for performance analysis.",
-    "links": []
+    "title": "CAR-UNet — ConvNeXt + Attention Residual UNet for Monaural Speech Enhancement",
+    "subtitle": "Ongoing • TASLP (under review)",
+    "summary": "ConvNeXt front-end with attention-augmented residual UNet decoder for low-SNR single-channel enhancement.",
+    "status": "current",
+    "img": "assets/img/projects/placeholder.jpg",
+    "tags": ["Speech Enhancement", "ConvNeXt", "Attention", "UNet"],
+    "links": [
+      { "label": "View details", "href": "#" }
+    ]
+  },
+
+  {
+    "title": "IoT-based Gas Burner Monitoring System",
+    "subtitle": "Finished • EEE Robotics & Automation Lab",
+    "summary": "Gas level, temperature, and flame sensing with wireless telemetry and safety alerts.",
+    "status": "finished",
+    "img": "assets/img/projects/placeholder.jpg",
+    "tags": ["IoT", "Sensors", "Safety", "Realtime"],
+    "links": [
+      { "label": "GitHub", "href": "https://github.com/Rudraroy0305/IoT-based-Gas-Burner-Monitoring-System" }
+    ]
+  },
+  {
+    "title": "Solar Panel Monitoring & Dual-Axis Solar Tracker",
+    "subtitle": "Finished • Microprocessor Lab",
+    "summary": "Realtime PV telemetry with automated tracking to maximize irradiance; control + logging for analysis.",
+    "status": "finished",
+    "img": "assets/img/projects/placeholder.jpg",
+    "tags": ["Embedded", "Control", "Energy", "IoT"],
+    "links": [
+      { "label": "GitHub", "href": "https://github.com/Rudraroy0305/IoT-based-Solar-Pannel-Monitoring-And-Solar-Tracker-System" }
+    ]
+  },
+  {
+    "title": "Analog Signal Processing using MATLAB",
+    "subtitle": "Finished",
+    "summary": "Implementations of classic analog signal-processing blocks and analysis workflows for teaching/demo.",
+    "status": "finished",
+    "img": "assets/img/projects/placeholder.jpg",
+    "tags": ["MATLAB", "Signal Processing"],
+    "links": [
+      { "label": "GitHub", "href": "https://github.com/Rudraroy0305/ANALOG-SIGNAL-PROCESSING-USING-MATLAB" }
+    ]
+  },
+  {
+    "title": "Audio Steganography for Secure Data Transmission",
+    "subtitle": "Finished • Digital Signal Processing Lab",
+    "summary": "Hides payloads in audio; balances imperceptibility, capacity, and robustness.",
+    "status": "finished",
+    "img": "assets/img/projects/placeholder.jpg",
+    "tags": ["DSP", "Security", "Steganography"],
+    "links": [
+      { "label": "GitHub", "href": "https://github.com/Rudraroy0305/Audio-Steganography-for-Secure-Data-Transmission" }
+    ]
+  },
+  {
+    "title": "Electrical Service Design of a Multi-Storied Residential Building",
+    "subtitle": "Finished • Electrical Service Design Lab",
+    "summary": "Complete LV design: load estimation, protection coordination, SLDs, lighting, and safety compliance.",
+    "status": "finished",
+    "img": "assets/img/projects/placeholder.jpg",
+    "tags": ["Electrical Design", "SLD", "Protection"],
+    "links": [
+      { "label": "GitHub", "href": "https://github.com/Rudraroy0305/Electrical-Service-Design-of-a-Multi-Storied-Residential-Building" }
+    ]
   }
 ]

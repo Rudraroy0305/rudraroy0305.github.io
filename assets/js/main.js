@@ -387,4 +387,68 @@ document.addEventListener('DOMContentLoaded', () => {
     console.error(err);
   }
 })();
+// ========================================================
+// Projects: one-row-per-project from assets/data/projects.json
+// ========================================================
+(async function renderProjectsRows() {
+  const wrap = document.getElementById('projects-rows');
+  if (!wrap) return;
+
+  try {
+    const res = await fetch('assets/data/projects.json', { cache: 'no-store' });
+    if (!res.ok) throw new Error('Failed to load projects.json');
+    const projects = await res.json();
+
+    const frag = document.createDocumentFragment();
+    projects.forEach(p => {
+      const row = document.createElement('article');
+      row.className = 'proj-row';
+
+      const thumb = document.createElement('div');
+      thumb.className = 'proj-thumb';
+      thumb.style.backgroundImage = `url('${p.img || 'assets/img/projects/placeholder.jpg'}')`;
+
+      const body = document.createElement('div');
+      body.className = 'proj-body';
+
+      const h3 = document.createElement('h3');
+      h3.textContent = p.title || 'Untitled Project';
+
+      const sub = document.createElement('p');
+      sub.className = 'muted';
+      sub.textContent = p.subtitle || '';
+
+      const sum = document.createElement('p');
+      sum.textContent = p.summary || '';
+
+      const actions = document.createElement('p');
+      (p.links || []).forEach((lnk, i) => {
+        if (!lnk || !lnk.href) return;
+        const a = document.createElement('a');
+        a.className = 'btn';
+        a.href = lnk.href;
+        a.target = '_blank';
+        a.rel = 'noopener';
+        a.textContent = lnk.label || 'Link';
+        if (i) a.style.marginLeft = '8px';
+        actions.appendChild(a);
+      });
+
+      body.appendChild(h3);
+      body.appendChild(sub);
+      body.appendChild(sum);
+      if (actions.childNodes.length) body.appendChild(actions);
+
+      row.appendChild(thumb);
+      row.appendChild(body);
+      frag.appendChild(row);
+    });
+
+    wrap.textContent = '';
+    wrap.appendChild(frag);
+  } catch (err) {
+    wrap.innerHTML = `<article class="proj-row"><div class="proj-body"><h3>Projects unavailable</h3><p class="muted">Couldn’t load project data right now.</p></div></article>`;
+    console.error(err);
+  }
+})();
 
