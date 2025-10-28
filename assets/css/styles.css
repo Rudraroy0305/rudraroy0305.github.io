@@ -64,3 +64,47 @@ footer { border-top:1px solid #eee; padding:28px 16px; text-align:center; color:
   border:0; border-radius:8px; background:#f3f4f6; font-size:20px; cursor:pointer;
 }
 .modal__img { width:100%; max-height:320px; object-fit:cover; border-radius:12px; border:1px solid #eee; margin-bottom:10px; }
+/* ---- Work grid (Projects & Publications) ---- */
+.work-grid { 
+  display:grid; 
+  gap:22px; 
+  grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); 
+}
+
+.card {
+  background:#fff;
+  border:1px solid #e8ecf5;
+  border-radius:16px;
+  overflow:hidden;
+  transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  box-shadow:0 8px 18px rgba(15, 23, 42, 0.05);
+}
+.card:hover {
+  transform:translateY(-4px);
+  box-shadow:0 14px 30px rgba(15, 23, 42, 0.10);
+  border-color:#dbe4ff;
+}
+
+.card__img {
+  aspect-ratio:1 / 1;              /* perfect square */
+  background:#f1f5ff center/cover no-repeat;
+}
+.card__body { padding:14px 14px 16px; }
+.card__title { margin:0 0 6px; font-size:18px; line-height:1.35; }
+.card__subtitle { margin:0 0 10px; color:#64748b; font-size:14px; }
+.card__desc { margin:0 0 12px; color:#334155; }
+.card__actions .btn { padding:8px 12px; border-radius:9px; }
+
+/* Optional subtle tag chips */
+.chips { display:flex; flex-wrap:wrap; gap:6px; margin:0 0 10px; }
+.chip { font-size:12px; padding:2px 8px; border:1px solid #e2e8f0; border-radius:999px; background:#fff; }
+
+/* ---- Polished modal ---- */
+.modal__dialog{
+  max-width:880px;
+  padding:22px;
+  border:1px solid #e8ecf5;
+  box-shadow:0 22px 50px rgba(2, 6, 23, 0.22);
+}
+.modal__img { max-height:420px; }
+.modal__close{ background:#eef2ff; }
