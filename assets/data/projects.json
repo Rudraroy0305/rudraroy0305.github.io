@@ -1,0 +1,23 @@
+[
+  {
+    "title": "CAPRes50-GAN — Sign Language Recognition",
+    "subtitle": "Undergraduate thesis · Deep Learning, GANs, CV",
+    "summary": "Developed a GAN-enhanced model for word-level sign language recognition from video. Built a real-time detection app to support communication for the deaf community.",
+    "links": [
+      { "label": "Report (if any)", "href": "#" },
+      { "label": "Code (if public)", "href": "#" }
+    ]
+  },
+  {
+    "title": "IoT-Based Gas Burner Monitoring",
+    "subtitle": "Robotics & Automation Lab · IoT, Sensors, Realtime",
+    "summary": "Smart sensors track gas level, temperature, and flame status; data is sent wirelessly for remote monitoring. Alerts and control help prevent accidents and enable rapid response.",
+    "links": []
+  },
+  {
+    "title": "Smart Solar Panel Monitoring & Solar Tracker",
+    "subtitle": "Energy Systems · Embedded, Control",
+    "summary": "Built a real-time monitoring system and automated tracker to maximize energy generation; implemented sensing, actuation, and data logging for performance analysis.",
+    "links": []
+  }
+]
