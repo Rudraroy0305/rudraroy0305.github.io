@@ -51,3 +51,16 @@ footer { border-top:1px solid #eee; padding:28px 16px; text-align:center; color:
 }
 
 @media (max-width:420px){ h1{ font-size:32px; } }
+/* ---- Publications modal ---- */
+.modal { position:fixed; inset:0; display:none; }
+.modal[aria-hidden="false"] { display:block; }
+.modal__backdrop { position:absolute; inset:0; background:rgba(0,0,0,.45); }
+.modal__dialog {
+  position:relative; max-width:780px; margin:8vh auto; background:#fff;
+  border-radius:14px; padding:20px; box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+.modal__close {
+  position:absolute; top:8px; right:10px; width:36px; height:36px;
+  border:0; border-radius:8px; background:#f3f4f6; font-size:20px; cursor:pointer;
+}
+.modal__img { width:100%; max-height:320px; object-fit:cover; border-radius:12px; border:1px solid #eee; margin-bottom:10px; }

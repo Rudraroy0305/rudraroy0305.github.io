@@ -1,0 +1,50 @@
+[
+ {
+    "title": "Enhancing Communication for the Deaf and Hard-of-Hearing: A Custom Deep Learning Model-Based Approach for Real-Time Sign Language Recognition and Translation",
+    "venue": "IEEE R10-HTC 2024, Kuala Lumpur — pp. 1–6",
+    "img": "assets/img/pubs/p5.jpg",
+    "desc": "Custom deep model for real-time SLR + word translation; SOTA-level accuracy (e.g., 86.15% on WLASL-2000). Accessibility-focused, real-world validation.",
+    "doi": "https://doi.org/10.1109/R10-HTC59322.2024.10778790",
+    "scholar": "https://scholar.google.com/scholar?q=Custom+Deep+Learning+Real-Time+Sign+Language+Recognition+Translation+R10-HTC+2024"
+  },
+  {
+    "title": "DPMAS-Net: A Privacy-Preserving Deep Learning Model for EMG-Based Hand Gesture Recognition with Time-Frequency Domain Features",
+    "venue": "TENSYMP 2024, New Delhi — pp. 1–6",
+    "img": "assets/img/pubs/p6.jpg",
+    "desc": "Differential-privacy EMG gesture recognition; accuracy near non-private SOTA (e.g., Ninapro DB4 86.4% w/ privacy, 92.0% w/o). Strong across multiple datasets.",
+    "doi": "https://doi.org/10.1109/TENSYMP61132.2024.10752112",
+    "scholar": "https://scholar.google.com/scholar?q=DPMAS-Net+Privacy-Preserving+EMG+Hand+Gesture+Recognition"
+  },
+  {
+    "title": "N2N2N: A Clean Data Independent Speech Enhancement Approach with Modified cGAN",
+    "venue": "TENCON 2024, Singapore — pp. 1474–1477",
+    "img": "assets/img/pubs/p3.jpg",
+    "desc": "Noise-to-Noisy-to-Noise with modified cGAN + RAUNet generator; handles known-noise scenarios, strong PESQ/STOI/CBAK/COVL/SSNR at very low SNRs (e.g., −15 dB).",
+    "doi": "https://doi.org/10.1109/TENCON61640.2024.10903013",
+    "scholar": "https://scholar.google.com/scholar?q=N2N2N+Clean+Data+Independent+Speech+Enhancement+modified+cGAN"
+  },
+  {
+    "title": "Bio-Markers Presence Detection Using Transfer and Ensemble Learning on Optical Coherence Tomography of Retinal Imagery",
+    "venue": "ICEEICT 2024, Dhaka — pp. 915–920",
+    "img": "assets/img/pubs/p1.jpg",
+    "desc": "Transfer + ensemble learning on retinal OCT for six biomarkers; FFT-based denoising and brightness/contrast tuning. Best combo: DenseNet169 + GoogLeNet. Acc 93.63%, F1 0.87.",
+    "doi": "https://doi.org/10.1109/ICEEICT62016.2024.10534519",
+    "scholar": "https://scholar.google.com/scholar?q=Bio-Markers+Presence+Detection+OCT+Retinal+Imagery+ICEEICT+2024"
+  },
+  {
+    "title": "WnD-UNET: A Waveform and Discrete Wavelet Coefficient-Based 1D Deep Learning Model for Single-Channel Noisy Speech Enhancement",
+    "venue": "ICCIT 2024, Cox's Bazar — pp. 3554–3559",
+    "img": "assets/img/pubs/p2.jpg",
+    "desc": "Concatenates waveform and db1 DWT features for robust speech enhancement. STOI 0.97 @ 5 dB and 0.79 @ −10 dB; strong generalization in very noisy settings.",
+    "doi": "https://doi.org/10.1109/ICCIT64611.2024.11022373",
+    "scholar": "https://scholar.google.com/scholar?q=WnD-UNET+Discrete+Wavelet+1D+Deep+Learning+Speech+Enhancement"
+  },
+  {
+    "title": "VOIS+: A Video Over Intercom Service with Home Automation Features for Advanced Security and Safety",
+    "venue": "RAAICON 2024, Dhaka — pp. 299–302",
+    "img": "assets/img/pubs/p4.jpg",
+    "desc": "Video intercom + smart home automation: face recognition, fire/electrical safety, remote monitoring/control; affordable and responsive system for home security.",
+    "doi": "https://doi.org/10.1109/RAAICON64172.2024.10928380",
+    "scholar": "https://scholar.google.com/scholar?q=VOIS%2B+Video+Over+Intercom+Home+Automation+Security+Safety"
+  }
+]
