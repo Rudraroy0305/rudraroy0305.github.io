@@ -129,3 +129,21 @@ header { background: transparent; border-bottom: 0; }
 }
 .hero-title{ font-size: clamp(40px, 7vw, 72px); margin: 0 0 8px; letter-spacing: .5px; }
 .hero-sub{ font-size: clamp(14px, 2.4vw, 18px); opacity: .9; }
+/* ---- About two-column ---- */
+.about-wrap{
+  max-width: 1100px; margin: 48px auto; padding: 0 16px;
+  display:grid; grid-template-columns: 420px 1fr; gap: 28px; align-items:start;
+}
+.about-photo{
+  width:100%; border-radius:16px; border:1px solid #e8ecf5; box-shadow:0 8px 18px rgba(15,23,42,.06);
+  object-fit:cover; aspect-ratio: 4 / 5;                   /* tall portrait */
+}
+.section-title{
+  font-size: 32px; margin: 0 0 8px;
+}
+.title-underline{
+  width: 80px; height: 6px; border-radius: 999px; margin: 6px 0 18px;
+  background: linear-gradient(90deg,#f0b429,#f7d37a);      /* gold bar */
+}
+.about-text p{ margin: 0 0 12px; }
+.about-text b{ font-weight: 700; }
