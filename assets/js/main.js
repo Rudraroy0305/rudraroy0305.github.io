@@ -259,3 +259,106 @@ document.addEventListener('DOMContentLoaded', () => {
     console.error(e);
   }
 })();
+// =====================================================================
+// Publications — one-row-per-paper renderer (image left, text right)
+// Uses the same publications.json and modal as the grid version.
+// =====================================================================
+(async function renderPublicationsRows() {
+  const wrap = document.getElementById('pubs-rows');
+  if (!wrap) return; // only on publications.html
+
+  // Modal bits (already present on publications.html)
+  const modal = document.getElementById('pub-modal');
+  const mImg = document.getElementById('pub-modal-img');
+  const mTitle = document.getElementById('pub-modal-title');
+  const mVenue = document.getElementById('pub-modal-venue');
+  const mDesc = document.getElementById('pub-modal-desc');
+  const mLinks = document.getElementById('pub-modal-links');
+
+  function openModal(p) {
+    mImg.src = p.img || '';
+    mImg.alt = p.title || '';
+    mTitle.textContent = p.title || '';
+    mVenue.textContent = p.venue || '';
+    mDesc.textContent = p.desc || '';
+    mLinks.innerHTML = `
+      ${p.doi ? `<a class="btn" href="${p.doi}" target="_blank" rel="noopener">DOI</a>` : ''}
+      ${p.scholar ? `<a class="btn" href="${p.scholar}" target="_blank" rel="noopener" style="margin-left:8px;">Google Scholar</a>` : ''}
+    `;
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal() {
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+  modal.addEventListener('click', (e) => {
+    if (e.target.matches('[data-close]') || e.target.classList.contains('modal__backdrop')) {
+      closeModal();
+    }
+  });
+  window.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+
+  try {
+    const res = await fetch('assets/data/publications.json', { cache: 'no-store' });
+    if (!res.ok) throw new Error('Failed to load publications.json');
+    const pubs = await res.json();
+
+    const frag = document.createDocumentFragment();
+    pubs.forEach(p => {
+      const row = document.createElement('article');
+      row.className = 'pub-row';
+
+      const thumb = document.createElement('div');
+      thumb.className = 'pub-thumb';
+      thumb.style.backgroundImage = `url('${p.img || ''}')`;
+
+      const body = document.createElement('div');
+      body.className = 'pub-body';
+
+      const h3 = document.createElement('h3');
+      h3.textContent = p.title || 'Untitled Publication';
+
+      const venue = document.createElement('p');
+      venue.className = 'muted';
+      venue.textContent = p.venue || '';
+
+      const desc = document.createElement('p');
+      desc.textContent = p.desc || '';
+
+      const actions = document.createElement('p');
+      const viewBtn = document.createElement('a');
+      viewBtn.href = 'javascript:void(0)';
+      viewBtn.className = 'btn';
+      viewBtn.textContent = 'View details';
+      viewBtn.addEventListener('click', () => openModal(p));
+      actions.appendChild(viewBtn);
+
+      if (p.doi) {
+        const doiBtn = document.createElement('a');
+        doiBtn.className = 'btn';
+        doiBtn.style.marginLeft = '8px';
+        doiBtn.href = p.doi;
+        doiBtn.target = '_blank';
+        doiBtn.rel = 'noopener';
+        doiBtn.textContent = 'DOI';
+        actions.appendChild(doiBtn);
+      }
+
+      body.appendChild(h3);
+      body.appendChild(venue);
+      body.appendChild(desc);
+      body.appendChild(actions);
+
+      row.appendChild(thumb);
+      row.appendChild(body);
+      frag.appendChild(row);
+    });
+
+    wrap.textContent = '';
+    wrap.appendChild(frag);
+  } catch (err) {
+    wrap.innerHTML = `<article class="pub-row"><div class="pub-body"><h3>Publications unavailable</h3><p class="muted">Couldn’t load the list right now.</p></div></article>`;
+    console.error(err);
+  }
+})();
